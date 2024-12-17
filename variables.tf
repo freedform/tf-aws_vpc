@@ -38,3 +38,15 @@ variable "create_nat_gateway" {
   type        = bool
   default     = false
 }
+
+variable "name_prefix" {
+  description = "Name prefix for created object"
+  type        = string
+  default     = null
+}
+
+variable "tags" {
+  description = "Tags that are assigned to network objects"
+  type        = object({})
+  default     = {}
+}
