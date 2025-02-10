@@ -2,6 +2,10 @@ output "vpc_id" {
   value = aws_vpc.vpc.id
 }
 
+output "vpc_cidr_block" {
+  value = var.cidr_block
+}
+
 output "public_subnets" {
   value = [
     for object in values(aws_subnet.public_subnet) : object.id
