@@ -39,3 +39,8 @@ output "private_route_tables" {
     for object in values(aws_route_table.private) : object.id
   ]
 }
+
+output "elastic_ips" {
+  value       = [for eip in aws_eip.eip : eip.public_ip]
+  description = "List of allocated Elastic IP addresses"
+}

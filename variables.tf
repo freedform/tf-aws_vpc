@@ -33,10 +33,10 @@ variable "private_subnets" {
   default     = []
 }
 
-variable "create_nat_gateway" {
-  description = "Controls creation of NAT gateway"
-  type        = bool
-  default     = false
+variable "nat_gateway_count" {
+  description = "Controls NAT gw count"
+  type        = number
+  default     = 0
 }
 
 variable "name_prefix" {
